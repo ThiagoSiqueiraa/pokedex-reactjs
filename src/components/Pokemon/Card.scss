@@ -1,0 +1,224 @@
+
+$color-grass: #9bcc50;
+$color-poison: #b97fc9;
+$color-normal: #a4acaf;
+$color-flying: #3dc7ef;
+$color-flying-secondary: #bdb9b8;
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin background($color-primary, $color-secondary){
+    background: linear-gradient(180deg, $color-primary 50%, $color-secondary 50%);
+    background-color: $color-primary;
+}
+
+body{
+    @include reset();
+}
+
+
+.pokemons{
+    &-wrapper
+    {
+        padding: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #fff;
+    }
+
+    &-filter
+    {
+        width: 100%;
+        .pill
+        {
+            margin: 0 1.5625% 0.8% 0;
+        }
+    }
+
+    &-cards
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+ }
+
+
+
+  .pokemon{
+
+    &_grass{
+       @include background($color-grass, $color-grass)
+    }
+    
+    &_poison{
+        @include background($color-poison, $color-poison)
+    }
+    
+    &_normal{
+        @include background($color-normal, $color-normal);
+        color: #212121;
+    }
+    
+    &_flying{
+        @include background($color-flying, $color-flying-secondary);
+        color: #212121;
+    }
+    
+    &_fire{
+        background: linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+        background-color: #fd7d24;
+        color: #fff;
+    }
+    
+    &_bug{
+      background: linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+      background-color: #729f3f;
+    }
+    
+    &_water{
+      background: linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+      background-color: #4592c4;
+      color: #fff;
+    }
+    
+    &_fighting{
+      background: linear-gradient(180deg, #d56723 50%, #d56723 50%);
+      background-color: #d56723;
+      color: #fff;
+    }
+    
+    &_ground{
+      background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+      background-color: #f7de3f;
+      color: #212121;
+    }
+    
+    &_psychic{
+      background: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+      background-color: #f366b9;
+      color: #fff;
+    }
+    
+    &_electric{
+        background: linear-gradient(180deg, #eed535 50%, #eed535 50%);
+        background-color: #eed535;
+        color: #212121;
+    }
+    
+    &_steel{
+      background: linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+      background-color: #9eb7b8;
+      color: #212121;
+    }
+    
+    &_fairy{
+      background: linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+      background-color: #fdb9e9;
+      color: #212121;
+    }
+    
+    &_dragon{
+      background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+      background-color: #53a4cf;
+      color: #fff;
+    }
+    
+    &_ice{
+      background: linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+        background-color: #51c4e7;
+        color: #212121;
+    }
+    
+    &_rock{
+      background: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+      background-color: #a38c21;
+      color: #fff;
+    }
+    
+    &_dark{
+        background: linear-gradient(180deg, #707070 50%, #707070 50%);
+        background-color: #707070;
+        color: #fff;
+    }
+    
+    &_ghost{
+      background: linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+      background-color: #7b62a3;
+      color: #fff;
+    }
+  }
+  
+
+  
+  .card-wrapper{
+    background-color: #f5f4f4ad;
+    width: 15%;
+    height: 250px;
+    border-radius: 6% 6% 8% 8%;
+    margin: 0px 1% 1% 0px;
+
+    .card-badges{
+        padding: 10px;
+    }
+
+    .card-id{
+        padding-left: 10px;
+        color: rgb(141, 141, 141);
+    }
+
+    .card-image, .card-title{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+      }
+
+  }
+  
+
+
+  
+  
+  
+  .pill{
+    line-height: 18px;
+      max-width: 110px;
+      margin: 0 1.5625% 0 0;
+      width: 38.4375%;
+      float: left;
+      text-transform: none;
+      font-size: 11px;
+      text-align: center;
+  }
+  
+  .inactive{
+    opacity: 40%;
+  }
+  
+  .inactive:hover{
+    opacity: 100%;
+    cursor: pointer;
+  }
+  
+
+  
+  .actions{
+    margin: 0 auto;
+  }
+  
+  .actions button{
+    background-color: #3dc7ef;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+  
+  }
+  
+  .actions button:hover{
+    cursor: pointer;
+    background-color: #212121;
+  }
+
